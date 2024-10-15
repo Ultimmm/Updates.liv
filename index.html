@@ -1,59 +1,141 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/home.css">
-</head>
-<body>
 
-  <!-- Navbar -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">Jambavan<span>.</span></div>
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="news.html">News Feed</a></li>
-          <li><a href="videos.html">Videos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="tech.html">Tech Corner</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="contact.html">Contact</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Global News - Stay Informed</title>
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  
+  <!-- Custom Styles -->
+  <style>
+    .marquee {
+      white-space: nowrap;
+      
+      box-sizing: border-box;
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Breaking News Marquee -->
+  <div class="bg-red-600 text-white py-2">
+    <div class="container mx-auto">
+      <div class="marquee font-bold text-lg">
+        Breaking News: Global Economic Crisis Looms Amidst Rising Inflation and Trade Tensions.
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-4xl font-bold">Global News</h1>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:text-red-500">Home</a></li>
+          <li><a href="#" class="hover:text-red-500">World</a></li>
+          <li><a href="#" class="hover:text-red-500">Politics</a></li>
+          <li><a href="#" class="hover:text-red-500">Business</a></li>
+          <li><a href="#" class="hover:text-red-500">Entertainment</a></li>
         </ul>
       </nav>
-      <div class="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <h1>Where Luxury Meets Technology</h1>
-        <p>Experience sophistication, innovation, and artistry in web design.</p>
-        <a href="news.html" class="cta-btn">Explore News</a>
-        <p></p>
-        <a href="blog.html" class="cta-btn">Explore Blogs</a>
+  <section class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto">
+      <h2 class="text-5xl font-bold mb-10 text-center">Global News - Stay Informed</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Featured Article 1 -->
+        <div class="relative hover-scale">
+          <img src="https://via.placeholder.com/600x400" alt="Featured News" class="w-full h-64 object-cover rounded-lg shadow-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 rounded-lg">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Featured News Title 1</h3>
+              <a href="#" class="text-blue-400 underline">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Article 2 -->
+        <div class="relative hover-scale">
+          <img src="https://via.placeholder.com/600x400" alt="Featured News" class="w-full h-64 object-cover rounded-lg shadow-lg" />
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-end p-6 rounded-lg">
+            <div>
+              <h3 class="text-2xl font-bold mb-2">Featured News Title 2</h3>
+              <a href="#" class="text-blue-400 underline">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News Section -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-10">Latest News</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Latest Article 1 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale">
+          <img src="https://via.placeholder.com/400x300" alt="Latest News" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-4">Latest News Title 1</h3>
+            <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="#" class="text-blue-600 underline">Read More</a>
+          </div>
+        </div>
+
+        <!-- Latest Article 2 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale">
+          <img src="https://via.placeholder.com/400x300" alt="Latest News" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-4">Latest News Title 2</h3>
+            <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="#" class="text-blue-600 underline">Read More</a>
+          </div>
+        </div>
+
+        <!-- Latest Article 3 -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden hover-scale">
+          <img src="https://via.placeholder.com/400x300" alt="Latest News" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-4">Latest News Title 3</h3>
+            <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <a href="#" class="text-blue-600 underline">Read More</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Luxe. All Rights Reserved.</p>
-    </div>
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2024 Global News. All rights reserved.</p>
   </footer>
 
-  <script src="scripts/home.js"></script>
 </body>
+
 </html>
